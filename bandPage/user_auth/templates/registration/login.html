@@ -1,0 +1,14 @@
+{% block content %}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  <form>
+    <!-- Adds a link which takes us to the band updates main page! -->
+    <a href="{% url 'user_auth:register' %}">
+      Sign up now!
+    </a>
+  </form>
+{% endblock %}
